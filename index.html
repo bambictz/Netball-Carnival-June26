@@ -602,22 +602,7 @@ const playerCourts = {
   mya:     {color:'#6a4c93', courts:[2,5,6]},
 };
 
-const svg = document.getElementById('mapSvg');
-Object.entries(playerCourts).forEach(([player, data]) => {
-  data.courts.forEach(c => {
-    const pos = courtPositions[c];
-    if (!pos) return;
-    const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
-    circle.setAttribute('cx', pos.x);
-    circle.setAttribute('cy', pos.y);
-    circle.setAttribute('r', '28');
-    circle.setAttribute('fill', 'none');
-    circle.setAttribute('stroke', data.color);
-    circle.setAttribute('stroke-width', '5');
-    circle.setAttribute('opacity', '0.9');
-    svg.appendChild(circle);
-  });
-});
+
 </script>
 </body>
 </html>
